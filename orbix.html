@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Добавление iframe</title>
+</head>
+<body>
+
+<button id="addFrameButton" style="position:fixed;left:100px;top:130px;">Добавить iframe</button>
+
+<script>
+document.getElementById("addFrameButton").addEventListener("click", function() {
+    // Создаем элемент iframe
+    var frame = document.createElement("iframe");
+    frame.id = "myFrame";
+    frame.src = "https://orbixtoken.com/mining";
+    frame.width = "800";
+    frame.height = "200";
+    frame.frameBorder = "0";
+    
+    // Находим первый элемент на странице
+    var firstElement = document.body.firstChild;
+
+    // Добавляем фрейм в самое начало страницы
+    document.body.insertBefore(frame, firstElement);
+});
+</script>
+
+</body>
+</html>
